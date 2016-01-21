@@ -56,7 +56,7 @@
   </context-param>
   <listener>
 	 <listener-class>
-	  com.sep.timerTask.MyTimerTaskListener
+	  com.s2sh.timerTask.MyTimerTaskListener
 	 </listener-class>
   </listener>
 </web-app>
