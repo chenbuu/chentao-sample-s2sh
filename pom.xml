@@ -20,9 +20,19 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>1.0.11</version>
+		</dependency>
+		<dependency>
 			<groupId>com.github.axet</groupId>
 			<artifactId>kaptcha</artifactId>
 			<version>0.0.9</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.zhanhb</groupId>
+			<artifactId>character-encoding-filter</artifactId>
+			<version>2.1.6.1</version>
 		</dependency>
 		<dependency>
 			<groupId>com.google.guava</groupId>
@@ -300,6 +310,10 @@
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
 		</dependency>
+		<!-- <dependency> <groupId>org.apache.cxf</groupId> <artifactId>apache-cxf</artifactId> 
+			<version>3.0.2</version> <type>pom</type> <scope>import</scope> </dependency> 
+			<dependency> <groupId>org.apache.cxf</groupId> <artifactId>cxf-rt-frontend-jaxws</artifactId> 
+			<version>3.0.2</version> </dependency> -->
 	</dependencies>
 
 	<build>
@@ -335,7 +349,7 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.5</version>
 				<configuration>
-					<warSourceDirectory>${basedir}/WebContent</warSourceDirectory>
+					<warSourceDirectory>${basedir}/WebRoot</warSourceDirectory>
 					<version>3.1</version>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 				</configuration>
@@ -348,6 +362,20 @@
 					<testFailureIgnore>${maven.test.failure.ignore}</testFailureIgnore>
 				</configuration>
 			</plugin>
+			<!-- <plugin> <groupId>com.samaxes.maven</groupId> <artifactId>minify-maven-plugin</artifactId> 
+				<version>1.7.4</version> <executions> <execution> <id>default-minify</id> 
+				<phase>package</phase> <configuration> <cssSourceDir>/</cssSourceDir> <cssSourceFiles> 
+				<cssSourceFile>jquery-ui-1.11.1.custom/jquery-ui.css</cssSourceFile> </cssSourceFiles> 
+				<cssSourceIncludes> <cssSourceInclude>**/*.css</cssSourceInclude> </cssSourceIncludes> 
+				<cssSourceExcludes> <cssSourceExclude>**/*.min.css</cssSourceExclude> <cssSourceExclude>resource/css/style.css</cssSourceExclude> 
+				<cssSourceExclude>resource/css/style.min.css</cssSourceExclude> </cssSourceExcludes> 
+				<cssTargetDir>resources/css</cssTargetDir> <jsSourceDir>/</jsSourceDir> <jsSourceFiles> 
+				<jsSourceFile>resources/js/jquery-1.11.3.js</jsSourceFile> </jsSourceFiles> 
+				<jsSourceIncludes> <jsSourceInclude>**/*.js</jsSourceInclude> </jsSourceIncludes> 
+				<jsSourceExcludes> <jsSourceExclude>**/*.min.js</jsSourceExclude> </jsSourceExcludes> 
+				<jsTargetDir>resources/js</jsTargetDir> <jsEngine>YUI</jsEngine> <webappTargetDir>${basedir}/src/main/webapp</webappTargetDir> 
+				</configuration> <goals> <goal>minify</goal> </goals> </execution> </executions> 
+				</plugin> -->
 		</plugins>
 	</build>
 </project>
