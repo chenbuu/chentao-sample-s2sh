@@ -2,11 +2,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>S2SH</groupId>
-	<artifactId>S2SH</artifactId>
+	<groupId>s2sh</groupId>
+	<artifactId>s2sh</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<description>S2SH系统通用pom.xml</description>
+	<description>s2sh系统通用pom.xml</description>
 
 	<properties>
 		<struts.version>2.3.16.3</struts.version>
